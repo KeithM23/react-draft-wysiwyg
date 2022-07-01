@@ -7,6 +7,7 @@ import classNames from 'classnames';
 import { getFirstIcon } from '../../../utils/toolbar';
 import Option from '../../../components/Option';
 import { Dropdown, DropdownOption } from '../../../components/Dropdown';
+import Icon from '../../../components/Icon';
 
 import './styles.css';
 
@@ -40,8 +41,7 @@ export default class Inline extends Component {
                 }
                 title={config[style].title || translations[`components.controls.inline.${style}`]}
               >
-                <img
-                  alt=""
+                <Icon
                   src={config[style].icon}
                 />
               </Option>),
@@ -75,9 +75,8 @@ export default class Inline extends Component {
         aria-label="rdw-inline-control"
         title={title}
       >
-        <img
+        <Icon
           src={getFirstIcon(config)}
-          alt=""
         />
         {
           config.options
@@ -92,9 +91,8 @@ export default class Inline extends Component {
                 }
                 title={config[style].title || translations[`components.controls.inline.${style}`]}
               >
-                <img
+                <Icon
                   src={config[style].icon}
-                  alt=""
                 />
               </DropdownOption>))
         }
